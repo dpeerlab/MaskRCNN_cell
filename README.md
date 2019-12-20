@@ -1,6 +1,6 @@
-# Mask R-CNN for single cell segmentation 
+# Mask R-CNN for single-cell segmentation 
 
-This implementation of Mask R-CNN is designed for single cell instance segmentation in multiplexed tissue imaging context. The model generates bounding boxes and segmentation masks for each instance of an object in the image. The codes are based on implementation of Mask R-CNN by [Matterport](https://github.com/matterport/Mask_RCNN) on Python 3, Keras, and TensorFlow. The purpose of this implementation of Mask_RCNN is to wrap its functions to be easier to use and name it a more streamlined pipeline for those who want to use Mask_RCNN for single cell instance segmentation.
+This implementation of Mask R-CNN is designed for single-cell instance segmentation in the context of multiplexed tissue imaging. The model generates bounding boxes and segmentation masks for each instance of an object in the image. The code is based on the implementation of Mask R-CNN by [Matterport](https://github.com/matterport/Mask_RCNN) in Python 3, Keras, and TensorFlow. The purpose of this Mask R-CNN implementation is to wrap its functions for ease of use and to provide a more streamlined pipeline for single-cell instance segmentation using Mask R-CNN.
 
 Features:
 
@@ -8,7 +8,7 @@ Features:
 
 * Solution for segmenting batch and large images
 
-* Support training on custom dataset 
+* Support for training on custom datasets 
 
   
 
@@ -18,7 +18,7 @@ Features:
 
 * Set up programming environment and necessary dependencies
 
-  * Set up conda for python environment management and cuda for GPU environment.
+  * Set up conda for python environment management and cuda for GPU environment
 
   * Clone this repository 
 
@@ -46,30 +46,30 @@ Features:
 
 * Train on custom dataset. Example: [train_custom_data.ipynb]. 
 
-  * Load data. 
+  * Load data
 
-  * Data augmentation. 
+  * Data augmentation
 
-  * Adjust training parameter. Current parameters are optimized for 200X images.
+  * Adjust training parameters. Current parameters are optimized for 200X images
 
-  * Backend and pertained model parameters. 
+  * Set model backend and pretained weights
 
-  * Training.  Progress of training can be viewed with `tensorboard --logdir logs/`
+  * Training. Training progress can be viewed using `tensorboard --logdir logs/`
 
   * Tip:
 
-    * GPU is highly recommend for training process. 
+    * GPU is highly recommended for training 
 
     
 
-* Predict segmentation on images with pre-trained model [predict_segmentation.ipynb] 
-  * Load target images.
-  * Adjust prediction parameters. 
-  * Predict on example image. 
-  * Batch output. The model allows input of a list of images and it will generate masks in Json format together with the original image overlapped with the mask.
-  * Prediction on large image via stitching function. The memory usage of the model depends on the maximum target number set in the prediction parameter and the size of input image. E.g., input image of 1024x1024 pixel with 3500 max prediction could take 8 G memory. 
+* Predict segmentation on images using pre-trained model [predict_segmentation.ipynb] 
+  * Load target images
+  * Adjust prediction parameters
+  * Predict segmentation on example image
+  * Batch output. The model allows input of a list of images, and it will generate masks in JSON format together with the original image overlaid with the mask
+  * Prediction on large image via stitching function. The model's memory usage depends on the maximum target number set in the prediction parameter and on the size of input image. For example, an input image of 1024x1024 pixels with 3500 max prediction could take 8 GB of memory. 
   * Tip: 
-    * CPU or GPU? Prediction can be done under CPU environment. And since for most services and computers, there are much more memory in CPU than GPU. It is actually cheaper and more stable to do prediction in CPU environment. 
+    * CPU or GPU? Prediction can be performed in a CPU environment, and since most CPU setups provide more memory than GPUs, it is actually cheaper and more stable to perform prediction in a CPU environment. 
 
 
 
@@ -83,7 +83,7 @@ Features:
 
 ## Acknowledgement 
 
-This work is supported by [Parker Institute for Cancer Immunotherapy](https://www.parkerici.org/)
+This work is supported by the [Parker Institute for Cancer Immunotherapy](https://www.parkerici.org/)
 
 
 
