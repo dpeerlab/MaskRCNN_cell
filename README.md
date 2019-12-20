@@ -81,10 +81,6 @@ Features:
 
 
 
-## Example
-
-
-
 ## Acknowledgement 
 
 This work is supported by [Parker Institute for Cancer Immunotherapy](https://www.parkerici.org/)
@@ -99,10 +95,3 @@ https://github.com/matterport/Mask_RCNN
 
 https://medium.com/@jonathan_hui/image-segmentation-with-mask-r-cnn-ebe6d793272
 
-
-
-
-
-Others:
-
-https://nbviewer.jupyter.org  
