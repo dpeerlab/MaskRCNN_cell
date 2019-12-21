@@ -27,21 +27,21 @@ Features:
   * ```bash
     conda env create -n maskrcnn_cell -f environment.yml
     source activate maskrcnn_cell
-  python -m ipykernel install --user --name maskrcnn_cell
+    python -m ipykernel install --user --name maskrcnn_cell
     ```
-    
+
   * For GPU version tensorflow:
 
   * ```bash
-  pip install -r requirement_gpu.txt
+    pip install -r requirement_gpu.txt
     ```
-    
+
   * For CPU version tensorflow:
 
   * ```
-  pip install -r requirement_cpu.txt
+    pip install -r requirement_cpu.txt
     ```
-    
+
   * Install pycocotools
 
     ```bash
@@ -77,6 +77,7 @@ Features:
     
 
 * Predict segmentation on images using pre-trained model [predict_segmentation.ipynb] 
+
   * Load target images
   * Adjust prediction parameters
   * Predict segmentation on example image
