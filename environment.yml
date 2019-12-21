@@ -1,0 +1,7 @@
+name: maskrcnn_Cell
+channels:
+  - anaconda
+  - https://repo.anaconda.com/pkgs/free
+  - defaults
+dependencies:
+  - ipykernel=5.1.3=py36h39e3cac_0

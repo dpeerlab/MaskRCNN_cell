@@ -22,12 +22,26 @@ Features:
 
   * Clone this repository 
 
-  * Create a new conda environment
+  * Create a new conda environment 
 
   * ```bash
     conda env create -n maskrcnn_cell -f environment.yml
+    source activate maskrcnn_cell
+  python -m ipykernel install --user --name maskrcnn_cell
     ```
+    
+  * For GPU version tensorflow:
 
+  * ```bash
+  pip install -r requirement_gpu.txt
+    ```
+    
+  * For CPU version tensorflow:
+
+  * ```
+  pip install -r requirement_cpu.txt
+    ```
+    
   * Install pycocotools
 
     ```bash
@@ -94,4 +108,3 @@ He, K., G. Gkioxari, P. Dollár, and R. Girshick. 2017. “Mask R-CNN.” In *20
 https://github.com/matterport/Mask_RCNN 
 
 https://medium.com/@jonathan_hui/image-segmentation-with-mask-r-cnn-ebe6d793272
-
