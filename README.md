@@ -94,7 +94,9 @@ Features:
 
 ![img](./resource/figure/maskrcnn_framework.png)
 
-
+## Future plan
+- [ ] Change the mask file format from running length encoding to coco json formart.
+- [ ] Seamless stitching for large images
 
 ## Acknowledgement 
 
