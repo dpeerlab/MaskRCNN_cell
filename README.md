@@ -98,6 +98,10 @@ Features:
 - [ ] Change the mask file format from running length encoding to coco json formart.
 - [ ] Seamless stitching for large images
 
+## Note
+
+* The notebook here is just for demo purpose. Data are not included.
+
 ## Acknowledgement 
 
 This work is supported by the [Parker Institute for Cancer Immunotherapy](https://www.parkerici.org/)
