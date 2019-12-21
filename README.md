@@ -54,7 +54,7 @@ Features:
 
   * Set model backend and pretained weights
 
-  * Training. Training progress can be viewed using `tensorboard --logdir logs/`
+  * Training. 
 
   * Tip:
 
