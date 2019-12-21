@@ -58,7 +58,7 @@ Features:
 
 ### Usage
 
-* Train on custom dataset. Example: [train_custom_data.ipynb](./notebook/1.Image_segmentation_train.ipynb). 
+* Train on custom dataset. Demo: [train_custom_data.ipynb](./notebook/1.Image_segmentation_train.ipynb). 
 
   * Load data
 
@@ -76,7 +76,7 @@ Features:
 
     
 
-* Predict segmentation on images using pre-trained model [predict_segmentation.ipynb](./notebook/2.Image_Segmentation_prediction.ipynb) 
+* Predict segmentation on images using pre-trained model. Demo: [predict_segmentation.ipynb](./notebook/2.Image_Segmentation_prediction.ipynb) 
 
   * Load target images
   * Adjust prediction parameters
