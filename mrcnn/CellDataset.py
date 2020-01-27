@@ -43,7 +43,12 @@ class CellDataset(utils.Dataset):
         raw_image = imageio.imread(info['path'])
         x_offset = info['x_offset']
         y_offset = info['y_offset']
-        image = raw_image[x_offset:x_offset+size,y_offset:y_offset+size]  
+        if len(raw_image.shape)==3:
+            image = raw_image[x_offset:x_offset+size,y_offset:y_offset+size,:3]
+        else:
+            image = np.zeros((size,size,3))
+            for i in range(3):
+                image[:,:,i] = raw_image[x_offset:x_offset+size,y_offset:y_offset+size]
         return image
         
     def image_reference(self, image_id):
@@ -74,9 +79,14 @@ class CellDataset(utils.Dataset):
         labeled_mask, num_cells = scipy.ndimage.label(trimmed_mask)
         multi_dim_mask = np.zeros([size,size,num_cells])
     
+        count=0
         for i in range(1,num_cells+1):
-            multi_dim_mask[:,:,i-1] = (labeled_mask == i).astype(int)
-            
-        class_ids = np.ones(num_cells).astype(int)
+            mask = (labeled_mask == i).astype(int)
+            #print(mask.shape)
+            if np.sum(mask)>25:
+                multi_dim_mask[:,:,i-1] = (labeled_mask == i).astype(int)
+                count+=1
+        multi_dim_mask = multi_dim_mask[:,:,:count]
+        class_ids = np.ones(count).astype(int)
 
         return multi_dim_mask, class_ids
