@@ -1,3 +1,5 @@
+
+
 # Mask R-CNN for single-cell segmentation 
 
 This implementation of Mask R-CNN is designed for single-cell instance segmentation in the context of multiplexed tissue imaging. The model generates bounding boxes and segmentation masks for each instance of an object in the image. The code is based on the implementation of Mask R-CNN by [Matterport](https://github.com/matterport/Mask_RCNN) in Python 3, Keras, and TensorFlow. The purpose of this Mask R-CNN implementation is to wrap its functions for ease of use and to provide a more streamlined pipeline for single-cell instance segmentation using Mask R-CNN.
@@ -30,14 +32,20 @@ Features:
     python -m ipykernel install --user --name maskrcnn_cell
     ```
 
-  * For GPU version tensorflow:
+  * For GPU version tensorflow with specific cuda version :
 
   * ```bash
-    pip install -r requirement_gpu.txt
+    pip install -r requirement_gpu_cuda10.txt
     ```
 
-  * For CPU version tensorflow:
-
+    or
+    
+    ```bash
+    pip install -r requirement_gpu_cuda9.txt
+    ```
+    
+    For CPU version tensorflow:
+    
   * ```
     pip install -r requirement_cpu.txt
     ```
