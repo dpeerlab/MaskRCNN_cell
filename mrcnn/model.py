@@ -1828,7 +1828,8 @@ class MaskRCNN():
         self.mode = mode
         self.config = config
         self.model_dir = model_dir
-        self.set_log_dir()
+        if self.mode == "training":
+            self.set_log_dir()
         self.keras_model = self.build(mode=mode, config=config)
 
     def build(self, mode, config):
@@ -1852,6 +1853,7 @@ class MaskRCNN():
         input_image_meta = KL.Input(shape=[config.IMAGE_META_SIZE],
                                     name="input_image_meta")
         if mode == "training":
+
             # RPN GT
             input_rpn_match = KL.Input(
                 shape=[None, 1], name="input_rpn_match", dtype=tf.int32)
@@ -2123,7 +2125,7 @@ class MaskRCNN():
             f.close()
 
         # Update the log directory
-        self.set_log_dir(filepath)
+        #self.set_log_dir(filepath)
 
     def get_imagenet_weights(self):
         """Downloads ImageNet trained weights from Keras.
