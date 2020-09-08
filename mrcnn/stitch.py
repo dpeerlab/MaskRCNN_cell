@@ -162,7 +162,8 @@ def removeEntry(currData):
     '''
     #currData = copy.deepcopy(currData)
     A = sorted(list(set(currData['removeList'])),reverse=True)
-    N = len(currData['removeList'])
+    #N = len(currData['removeList'])
+    N = len(A)
     for i in range(N):
         currData['rois'] = np.delete(currData['rois'],A[i],0)
         currData['scores'] = np.delete(currData['scores'],A[i],0)
