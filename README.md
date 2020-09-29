@@ -24,7 +24,7 @@ Features:
 
   * Clone this repository 
 
-  * Create a new conda environment 
+  * Create a new conda environment with python 3.6 
 
   * ```bash
     conda env create -n maskrcnn_cell -f environment.yml
