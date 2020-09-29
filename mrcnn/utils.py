@@ -913,6 +913,9 @@ def rle_decode(rle, shape):
     """Decodes an RLE encoded list of space separated
     numbers and returns a binary mask."""
     rle = list(map(int, rle.split()))
+    if(len(rle) % 2 != 0):
+        #rle.append(0)
+        rle=rle[:-1]
     rle = np.array(rle, dtype=np.int32).reshape([-1, 2])
     rle[:, 1] += rle[:, 0]
     rle -= 1
