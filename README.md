@@ -1,4 +1,6 @@
 
+[![DOI](https://zenodo.org/badge/229309727.svg)](https://zenodo.org/badge/latestdoi/229309727)
+
 
 # Mask R-CNN for single-cell segmentation 
 
