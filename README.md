@@ -104,9 +104,9 @@ Features:
 
 ![img](./resource/figure/maskrcnn_framework.png)
 
-## Future plan
-- [x] Change the mask file format from running length encoding to coco json formart.
-- [x] Seamless stitching for large images
+## Pretrained model
+We trained on the following color setting: 20X, nuclei blue, tumor red, T cells: green, yellow, pink. You can adjust ur visualization accordingly.
+https://drive.google.com/file/d/1TiwxdduQyWebCLwh6k7ixRI3mEIKyfc3/view?usp=sharing
 
 ## Note
 
